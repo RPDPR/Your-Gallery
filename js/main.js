@@ -42,15 +42,19 @@ right_arrow.addEventListener('click', (e) => {
 })
 
 popup_area.addEventListener('click', (el) => {
-    popup.style.display = 'none';
-    popup_body.style.position = 'static'
-    popup_body.style.width = '900px'
-    popup_body.style.height = '700px'
-    popup_body.style.top = '0'
-    popup_body.style.left = '0'
-    popup_body.style.transform = 'translate(0%, 0%)'
 
-    popup_body.style.cursor = 'zoom-in'
+    if(window.innerWidth >= 1280){
+        popup_body.style.position = 'static'
+        popup_body.style.width = '900px'
+        popup_body.style.height = '700px'
+        popup_body.style.top = '0'
+        popup_body.style.left = '0'
+        popup_body.style.transform = 'translate(0%, 0%)'
+
+        popup_body.style.cursor = 'zoom-in'
+    }
+
+    popup.style.display = 'none';
 
     left_arrow.style.display = 'block'
     right_arrow.style.display = 'block'
@@ -59,7 +63,7 @@ popup_area.addEventListener('click', (el) => {
 popup_body.addEventListener('click', (el) => {
 
     if(check == 0 && window.innerWidth >= 1280){
-
+        console.log(window.innerWidth)
         popup_body.style.position = 'absolute'
         popup_body.style.width = '1200px'
         popup_body.style.height = '800px'
@@ -89,9 +93,6 @@ popup_body.addEventListener('click', (el) => {
         right_arrow.style.display = 'block'
 
         check = 0
-    }
-    else{
-
     }
 
 })
