@@ -63,7 +63,7 @@ popup_area.addEventListener('click', (el) => {
 popup_body.addEventListener('click', (el) => {
 
     if(check == 0 && window.innerWidth >= 1280){
-        console.log(window.innerWidth)
+        
         popup_body.style.position = 'absolute'
         popup_body.style.width = '1200px'
         popup_body.style.height = '800px'
